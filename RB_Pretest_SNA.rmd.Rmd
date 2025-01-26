@@ -1,0 +1,50 @@
+---
+title: "Abänge von Red Bull Salzburg"
+author: "Elias Bock"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(igraph)
+library(tidygraph)
+```
+
+# Netzwerk einlesen
+
+```{r Netzwerk einlesen}
+```
+
+
+```{r Netzwerk einlesen}
+el <- read.csv("https://raw.githubusercontent.com/Elias23B/Pretest_-bung/refs/heads/main/RB%20Edgelist.csv", header=T, as.is=T, sep = ",")
+
+nl <- read.csv("https://raw.githubusercontent.com/Elias23B/Pretest_-bung/refs/heads/main/RB%20Nodelist.csv", header=T, as.is=T, sep = ",")
+
+
+```
+
+
+# Netzwerk erstellen
+
+```{r Netzwerk erstellen}
+
+RBS <- graph_from_data_frame(d = el, vertices = nl, directed = TRUE)
+
+RBS
+
+```
+
+```{r Einfache Visualisierung, fig.height=9, fig.width=16}
+
+plot(RBS,
+      main = "Transfers von Red Bull Salzburg (15/16)")
+
+
+
+```
+```{r}
+
+```
+

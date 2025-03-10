@@ -1,0 +1,42 @@
+---
+title: "Codebuch"
+author: "Elias_Bock"
+date: "2025-03-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+# Codebuch für RB-Transfers
+
+Dieses Codebuch beschreibt die erhobenen Daten zu den Zu- und Abgängen der Vereine RB Leipzig, FC Red Bull Salzburg, FC Liefering, New York Red Bull und Red Bull Bragantino in den Saisons 21_22, 22_23 und 23_24.
+
+## **Transfer-Daten**
+
+| **Spalte** | **Beschreibung** | **Beispiel** |
+| --- | --- | --- |
+| `from` | Abgebender Verein oder Spieler (als ID). | rbs (FC Red Bull Salzburg) |
+| `to` | Aufnehmender Verein (als ID). | rbl (RB Leipzig) |
+| `weight` | Gewichtung des Transfers in Millionen Euro (z. B. Transferkosten, bei ablösefrei: 0). | 15 |
+| `transferart` | Art des Transfers. | 1=Kauf, 2=Leihe, 3=ablösefrei, 4=draft |
+| `saison` | Saison des Transfers. | 21_22, 22_23, 23_24 |
+
+---
+
+## **Node-Liste**
+
+| **Spalte** | **Beschreibung** | **Beispiel** |
+| --- | --- | --- |
+| `id` | Eindeutige ID für jeden Spieler oder Verein. Snake_case bei Spielern! | rbs, th_mue |
+| `name` | Vollständiger Name des Spielers oder Vereins. | FC Red Bull Salzburg, Thomas Müller |
+| `typ` | Typ des Knotens: **1 für Spieler, 2 für Verein**. | 2 |
+| `alter` | Geburtsjahr des Spielers zum Zeitpunkt des Transfers (bei Vereinen: leer). | 2001 |
+| `position` | Position des Spielers. | Innenverteidiger |
+| `land` | Land des Vereins / Nationalität des Spielers. | Österreich |
+
+```
+

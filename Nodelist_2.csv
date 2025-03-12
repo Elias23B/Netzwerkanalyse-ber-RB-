@@ -1,4 +1,4 @@
-id,name,typ,alter,land,position
+id,id_name,typ,alter,land,position
 aa_bk,aalborg bk,2,NA,daenemark,NA
 aa_gf,aarhus gf,2,NA,daenemark,NA
 aa_lo,aaron long,1,1992,usa,innenverteidiger
